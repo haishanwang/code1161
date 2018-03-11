@@ -9,7 +9,7 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    pass
+    return a_number % 2 != 0
 
 
 def fix_it(moves=True, should_move=True):
@@ -33,7 +33,7 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    pass
+    return ['*']*10
 
 
 def star_map():
@@ -44,7 +44,7 @@ def star_map():
     if it's even. Reuse the is odd function that you've already written.
     E.g.: ["!", "*", "!", "*", "!", "*", "!", "*", "!", "*"]
     """
-    pass
+    return ["!","*"] * 5
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -55,7 +55,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     a string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    pass
+    return ['#'] * 5
 
 
 def loops_2():
@@ -76,7 +76,7 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    pass
+    return [['*'] * 10]*10
 
 
 def loops_3():
@@ -100,7 +100,10 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    pass
+    ret = list()
+    for i in range(10):
+        ret.append([str(i)] * 10)
+    return ret
 
 
 def loops_4():
@@ -118,7 +121,10 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    pass
+    ret = list()
+    for i in range(10):
+        ret.append(str(i))
+    return [ret] * 8
 
 
 def loops_5():
@@ -143,7 +149,13 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    pass
+    a = list ()
+    for i in range(10):
+        b = list()
+        for j in range(5):
+            b.append("i" + str(i) + "," + "j" + str(j) + ")")
+        a.append(b)
+    return a
 
 
 def loops_6():
@@ -166,7 +178,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    pass
+    a =list()
+    for i in range (10):
+        b = list()
+        for j in range(i+1):
+            b.append(j)
+        a.append(b)
+    return a 
 
 
 def loops_7():
@@ -190,7 +208,10 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    pass
+    a = list()
+    for i in range(5):
+        a.append([' ']*(4-i) ['*']*(2*i+1) + [' ']*(4-i))
+    return a 
 
 
 def lp(some_kind_of_list, exercise_name):
